@@ -13,3 +13,5 @@ Very fast and straight forward discussion board.
    This will be the admin account.<br><br>
 6. Create New Forum<br>
    And you are ready to go!
+### Todo
+Add pagination for posts display.
