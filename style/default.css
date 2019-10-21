@@ -1,0 +1,136 @@
+/* CSS Stylesheet1 */
+
+body {
+    background: #ddeeff;
+}
+
+a {
+    color: #0000dd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+ul {
+    margin: 5px;
+}
+
+hr {
+    margin: 0px;
+}
+
+p {
+    margin: 8px 0px;
+}
+
+#wrapper {
+    width: 800px;
+    background: #f7f7f7;
+    margin: auto;
+    border: 3px solid #aaaaaa;
+    border-radius: 10px;
+    font-family: Times New Roman;
+    font-size: 16px;
+}
+
+#head {
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+#title {
+    font-size: 18px;
+    font-weight: bold;
+    float:left;
+}
+
+#loginlink {
+    padding-top: 2px;
+    padding-left: 16px;
+    float: left;
+}
+
+#copyright {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    border-top: 1px solid #999999;
+}
+
+#newforumlink {
+    float:right;
+}
+
+#breadcrumb {
+    font-style: italic;
+    background: #dddddd;
+    padding: 10px 10px;
+}
+
+#forums {
+    padding: 5px 10px;
+}
+
+td.forumname {
+    font-size: 18px;
+    padding: 4px 0px 1px 0px;
+}
+
+td.lasttopic {
+    font-size: 16px;
+    font-style: italic;
+    padding: 5px 5px 1px 10px;
+}
+
+td.description {
+    font-size: 16px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+#submitlink {
+    font-size: 17px;
+    padding: 5px 10px;
+}
+
+#topics {
+    font-size: 17px;
+    padding: 5px 10px;
+    border-top: 1px solid #999999;
+}
+
+td.topicdata {
+    font-style: italic;
+    padding: 2px 6px 2px 6px;
+}
+
+#posts {
+    
+}
+
+.posthead {
+    border-top: 1px solid #999999;
+    font-style: italic;
+    background: #e7e7e7;
+    padding-left: 10px;
+}
+
+.postbody {
+    padding: 0px 20px;
+}
+
+.paddin {
+    padding: 10px;
+}
+
+#loginform {
+    padding: 10px;
+    font-family: Courier New;
+    font-size: 14px;
+    font-weight: bold;
+}
+
