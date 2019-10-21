@@ -12,11 +12,9 @@ $db = new SQLite3('data/sqlite.db');
 if (isset($_POST['message'])) {
     require('inc/csrf_check.php');
     $tid = $_POST['tid'];
+    $data = $_POST['message'];
     require 'markdown/autoload.php';
     $parser = new \cebe\markdown\GithubMarkdown();
-    $parser->html5 = true;
-    $parser->enableNewlines = true;
-    $data = $_POST['message'];
     $message = $parser->parse($data);
     $userid = UID;
     $time = time();

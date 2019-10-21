@@ -41,7 +41,7 @@ class Markdown extends Parser
 	 * @var boolean whether to format markup according to HTML5 spec.
 	 * Defaults to `false` which means that markup is formatted as HTML4.
 	 */
-	public $html5 = false;
+	public $html5 = true;
 
 	/**
 	 * @var array these are "escapeable" characters. When using one of these prefixed with a

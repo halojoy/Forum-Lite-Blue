@@ -26,7 +26,7 @@ class GithubMarkdown extends Markdown
 	 * @var boolean whether to interpret newlines as `<br />`-tags.
 	 * This feature is useful for comments where newlines are often meant to be real new lines.
 	 */
-	public $enableNewlines = false;
+	public $enableNewlines = true;
 
 	/**
 	 * @inheritDoc
