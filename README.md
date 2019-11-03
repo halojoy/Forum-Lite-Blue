@@ -1,10 +1,10 @@
 ### Forum-Lite-Blue
 Lightweight forum software.<br>
 Very fast and straight forward discussion board.<br><br>
-Based on the following:<br>
+Based on the following:
 1. PHP 7<br>
-2. SQLite3 database class<br>
-3. phpLiteAdmin database admin<br>
+2. PDO database for SQLite or MySQL<br>
+3. phpLiteAdmin database admin for SQLite<br>
 4. Cebe Markdown parser
 
 ### Installation
