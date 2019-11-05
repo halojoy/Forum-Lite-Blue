@@ -29,7 +29,7 @@
      username VARCHAR(50), 
      password VARCHAR(100), 
      ip       VARCHAR(50),
-     ulevel   INT
+     ulevel   INT,
      logged   INT )";
     $db->exec($sql);
 
