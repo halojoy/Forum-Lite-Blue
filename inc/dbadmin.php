@@ -33,7 +33,7 @@
 ini_set('session.cookie_httponly', '1');
 session_start();
 
-if (!isset($_COOKIE['userid']) || $_COOKIE['userid'] != 1) {
+if (!isset($_COOKIE['userlevel']) || $_COOKIE['userlevel'] < 2) {
     header('location: ../index.php');
     exit();
 }

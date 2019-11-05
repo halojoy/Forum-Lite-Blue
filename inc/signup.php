@@ -46,13 +46,21 @@ if (isset($_POST['username'])) {
                 echo 'Username is already taken';
             else{
                 $passhash = password_hash($password, PASSWORD_BCRYPT);
-                $sql = "INSERT INTO users (username,password,ip) VALUES (?, ?, ?)";
+                $ulevel = 0;
+                $sql = "INSERT INTO users (username,password,ip,ulevel)
+                                            VALUES (?, ?, ?, ?)";
                 $sth = $db->prepare($sql);
                 $sth->bindParam(1, $username);
                 $sth->bindParam(2, $passhash);
                 $sth->bindParam(3, $ipaddress);
+                $sth->bindParam(4, $ulevel, PDO::PARAM_INT);
                 $sth->execute();
                 $sth = null;
+                $uid = $db->lastInsertId();
+                if ($uid == 1) {
+                    $sql = "UPDATE users SET ulevel=3 WHERE uid=$uid";
+                    $db->exec($sql);
+                }
                 $db  = null;
                 echo 'Success.<br>You can now go and login!<br><br>
                 Goto startpage: <a href="index.php">Home</a>';

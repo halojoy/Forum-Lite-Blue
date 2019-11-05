@@ -31,7 +31,7 @@ if (defined('UNAME') && !$locked) {
     <a href="?act=newpost&tid=<?php echo $tid ?>">Post Reply</a>
 </div>
 <?php
-}elseif (defined('UID') && UID == 1 && $locked) {
+}elseif (defined('ULEVEL') && ULEVEL > 0 && $locked) {
 ?>
 <div id="submitlink">
     <a href="?act=newpost&tid=<?php echo $tid ?>">Post Reply</a> (Locked)

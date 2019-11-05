@@ -29,13 +29,16 @@ if (isset($_POST['username'])) {
         exit();
     }else{
 
-        $sql = "SELECT uid,username,password FROM users
-                WHERE username LIKE '$username'";
+        $sql = "SELECT * FROM users WHERE username LIKE '$username'";
         $row = $db->query($sql)->fetch();
-        $db = null;
         if ($row && password_verify($password, $row->password)) {
-            setcookie('username', $row->username, time() + 30*24*3600);
-            setcookie('userid',   $row->uid,      time() + 30*24*3600);
+            setcookie('username',  $row->username, time() + 30*24*3600);
+            setcookie('userid',    $row->uid,      time() + 30*24*3600);
+            setcookie('userlevel', $row->ulevel,   time() + 30*24*3600);
+            $uid = $row->uid;
+            $sql = "UPDATE users SET logged=1 WHERE uid=$uid";
+            $db->exec($sql);
+            $db = null;
             header('location:index.php');
             exit();
         }else{

@@ -1,6 +1,6 @@
 <?php
 
-if (!defined('UID') || UID != 1) exit();
+if (!defined('ULEVEL') || ULEVEL < 1) exit();
 
 require('inc/header.php');
 ?>
@@ -12,6 +12,7 @@ require('inc/header.php');
 </div>
 
 <?php
+if (ULEVEL > 1) {
 if (isset($_POST['fid'])) {
     $fid = $_POST['fid'];
     $sql = "SELECT tid FROM topics WHERE fid=$fid";
@@ -52,6 +53,7 @@ if (isset($_GET['fid'])) {
 <?php
     echo '</div>';
 exit();
+}
 }
 
 if (isset($_POST['tid'])) {

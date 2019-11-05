@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('ULEVEL') || ULEVEL < 1) exit();
+
 if (!isset($_GET['tid']))
     exit();
 else

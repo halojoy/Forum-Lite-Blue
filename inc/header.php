@@ -18,9 +18,9 @@
 <?php
 if (defined('UNAME')) {
     echo '<a href="?act=logout">Logout</a>&nbsp;'.UNAME."\n";
-    if (UID == 1) {
+    if (ULEVEL > 0) {
         echo '&nbsp;&nbsp;&nbsp;<a href="?act=admin">Admin</a>'."\n";
-        if ($dbase == 'sqlite')
+        if ($dbase == 'sqlite' && ULEVEL > 1)
             echo '&nbsp;&nbsp;&nbsp;<a href="?act=dbadmin">DB-Admin</a>'."\n";
     }
 }else{

@@ -28,7 +28,9 @@
      uid      INTEGER PRIMARY KEY,
      username TEXT, 
      password TEXT, 
-     ip       TEXT )";
+     ip       TEXT,
+     ulevel   INTEGER,
+     logged   INTEGER )";
     $db->exec($sql);
 
     $sql = "CREATE TABLE IF NOT EXISTS banned (

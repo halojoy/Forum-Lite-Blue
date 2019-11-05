@@ -1,6 +1,6 @@
 <?php
 
-if (!defined('UID') || UID != 1) exit();
+if (!defined('ULEVEL') || ULEVEL < 1) exit();
 
 require('inc/header.php');
 ?>
@@ -19,7 +19,11 @@ foreach($db->query($sql) as $forum) {
     $fid   = $forum->fid;
     $fname = $forum->fname;
     echo '<tr><td><a href="?act=admtopics&fid='.$fid.'">'.$fname.'</a></td>';
-    echo '<td> - <a href="?act=dodelete&fid='.$fid.'"><em>Delete forum</em></a></td></tr>'."\n";
+    if (ULEVEL > 1)
+        echo '<td> - <a href="?act=dodelete&fid='.$fid.'">
+                                <em>Delete forum</em></a></td></tr>'."\n";
+    else
+        echo '<td></td></tr>';
 }
 $db = null;
 echo '</table>';

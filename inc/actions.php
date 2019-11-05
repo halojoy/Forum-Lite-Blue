@@ -21,6 +21,9 @@ switch($act):
     case 'deluser':
         require('inc/deluser.php');
         break;
+    case 'setuser':
+        require('inc/setuser.php');
+        break;
     case 'admusers':
         require('inc/admusers.php');
         break;

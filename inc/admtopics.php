@@ -1,6 +1,6 @@
 <?php
 
-if (!defined('UID') || UID != 1) exit();
+if (!defined('ULEVEL') || ULEVEL < 1) exit();
 
 require('inc/header.php');
 

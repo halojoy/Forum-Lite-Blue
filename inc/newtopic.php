@@ -77,7 +77,7 @@ $db = null;
         <input type="hidden" name="fid" value="<?php echo $fid ?>">
         <?php require('inc/csrf_create.php') ?>
         <?php
-            if (UID == 1) {
+            if (ULEVEL > 0) {
         ?>
         <input type="checkbox" name="locked" value="1"> Locked<br>
         <input type="checkbox" name="sticky" value="1"> Sticky<br>

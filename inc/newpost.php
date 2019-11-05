@@ -73,7 +73,7 @@ $db = null;
         <input type="hidden" name="tid" value="<?php echo $tid ?>">
         <?php require('inc/csrf_create.php') ?>
 <?php
-if (UID == 1) {
+if (ULEVEL > 0) {
     echo '<input type="hidden" name="dolock" value="1">';
     $locked = $topic->locked;
     $sticky = $topic->sticky;
